@@ -193,6 +193,48 @@ body {
   margin: 0;
 }
 
+.task-gallery-container {
+  width: min(96vw, 1500px);
+  max-width: none;
+}
+
+.simulation-task-gallery .column {
+  padding: 1rem;
+}
+
+.simulation-task-gallery video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.simulation-task-gallery .title {
+  margin-top: 0.75rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.methodology-policy-figure {
+  display: block;
+  width: min(120%, 1100px);
+  max-width: none;
+  margin: 0 50%;
+  transform: translateX(-50%);
+}
+
+.methodology-result-figure {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .methodology-result-figure {
+    width: 100%;
+  }
+}
+
 
 .interpolation-panel {
   background: #f5f5f5;
