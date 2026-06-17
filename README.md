@@ -1,11 +1,13 @@
-# Nerfies
+# TactileLab
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This repository contains the source code for the [TactileLab project website](https://yijionglin.github.io/tactilelab/).
 
-If you find Nerfies useful for your work please cite:
+TactileLab is an efficient multimodal tactile simulation framework for shear-sensitive dexterous sim-to-real robotic manipulation, built on IsaacLab.
+
+If you find TactileLab useful for your work, please cite:
 ```
 @article{lin2026tactilelab,
-  author    = {Lin,Yijiong and Lepora, Nathan F.},
+  author    = {Lin, Yijiong and He, Wenhao and Lepora, Nathan F.},
   title     = {TactileLab: Efficient Multimodal Tactile Simulation for Shear-Sensitive Dexterous Sim2Real Robotic Manipulation},
   journal   = {arxiv},
   year      = {2026},
