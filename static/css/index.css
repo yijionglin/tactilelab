@@ -8,13 +8,65 @@ body {
     color: #000;
 }
 
-.link-block a {
+.link-block a,
+.link-block .button {
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .dnerf {
   font-variant: small-caps;
+}
+
+.publication-hero {
+  margin-bottom: 4rem;
+  min-height: 76vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.publication-hero .hero-body {
+  align-items: center;
+  display: flex;
+  min-height: 76vh;
+  position: relative;
+  z-index: 2;
+}
+
+.publication-cover-video,
+.publication-cover-overlay {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.publication-cover-video {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 0;
+}
+
+.publication-cover-overlay {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.28) 42%,
+    rgba(0, 0, 0, 0.58)
+  );
+  z-index: 1;
+}
+
+.publication-hero .publication-title,
+.publication-hero .publication-authors,
+.publication-hero .publication-authors a {
+  color: #fff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.48);
+}
+
+.publication-hero .button.is-dark {
+  background-color: rgba(20, 20, 20, 0.82);
 }
 
 
@@ -25,6 +77,20 @@ body {
 
 .teaser {
   font-family: 'Google Sans', sans-serif;
+}
+
+/* Tune the teaser video width here. Increase max-width for a larger video. */
+.teaser-container {
+  left: 50%;
+  max-width: 1180px;
+  position: relative;
+  transform: translateX(-50%);
+  width: 92vw;
+}
+
+#teaser {
+  display: block;
+  width: 100%;
 }
 
 
