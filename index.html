@@ -313,7 +313,53 @@
 
 
 <section class="section">
-  <div class="container task-gallery-container sim2real-container">
+  <div class="container task-gallery-container content">
+    <h2 class="title is-3 has-text-centered">Multi-modal Tactile Real2Sim Transfer</h2>
+
+    <img class="real2sim-flow-figure"
+         src="./static/images/example_real2sim_flow_1.png"
+         alt="Tactile flow data collection in real-world and simulated settings, first row.">
+    <img class="real2sim-flow-figure"
+         src="./static/images/example_real2sim_flow_2.png"
+         alt="Tactile flow data collection in real-world and simulated settings, second row.">
+
+    <p class="has-text-justified">
+      Tactile flow data collection in real-world and simulated settings. The examples are shown across two rows of contact motions: press and slide in the first row, and tilt and twist in the second row. For each motion, the left image shows the real-world robot data collection setup, while the right panels show the real tactile image, sparse marker flow, contact depth map, and dense pixel-level simulated tactile flow.
+    </p>
+
+    <div class="columns is-multiline real2sim-data-collection">
+      <div class="column is-half">
+        <div class="content">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/tactilelab/data_collect/combined_data_collect.mp4"
+                    type="video/mp4">
+          </video>
+          <h3 class="title is-5">Digital-Twin Tactile Data Collection</h3>
+          <p class="has-text-justified">
+            Physical and simulated data collection follow the same contact targets. During real-world collection, the robot waits for a time period at each target position to allow the tactile skin to settle before moving to the next target. In simulation, this waiting period is unnecessary because the tactile response is generated from rigid-body physics.
+          </p>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="content">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/tactilelab/data_collect/multi_robot_collect.mp4"
+                    type="video/mp4">
+          </video>
+          <h3 class="title is-5">Parallel Simulated Data Collection</h3>
+          <p class="has-text-justified">
+            In TactileLab, multiple robot environments collect tactile flow data in parallel, increasing data throughput. Compared with single-environment data collection in TactileGym, this multi-environment setup can speed up simulated data collection by approximately X times, where X is the number of parallel environments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container task-gallery-container">
     <h2 class="title is-3 has-text-centered">TactileLab Sim2Real Deployment</h2>
 
     <h3 class="title is-4">Dual-Arm Object-Tracking Tasks</h3>

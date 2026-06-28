@@ -198,11 +198,6 @@ body {
   max-width: none;
 }
 
-.sim2real-container {
-  width: 200%;
-  max-width: 1000px;
-}
-
 .simulation-task-gallery .column {
   padding: 1rem;
 }
@@ -215,6 +210,30 @@ body {
 }
 
 .simulation-task-gallery .title {
+  margin-top: 0.75rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.real2sim-flow-figure {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1.5rem;
+}
+
+.real2sim-data-collection {
+  margin-top: 1.5rem;
+}
+
+.real2sim-data-collection video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.real2sim-data-collection .title {
   margin-top: 0.75rem;
   font-size: 1.2rem;
   text-align: center;
