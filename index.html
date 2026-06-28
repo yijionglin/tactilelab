@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css?v=4">
+  <link rel="stylesheet" href="./static/css/index.css?v=5">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -101,16 +101,23 @@
           <h1 class="title is-1 publication-title">TactileLab: Efficient Multimodal Tactile Simulation for Shear-Sensitive Dexterous Sim2Real Robotic Manipulation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block" style="margin-right: 5px;">
-              <a href="https://yijionglin.github.io/">Yijiong Lin</a>,</span>
+              <a href="https://yijionglin.github.io/">Yijiong Lin</a><sup>&dagger;</sup>,</span>
             <span class="author-block" style="margin-right: 5px;">
-              Wenhao He,</span>
+              Wenhao He<sup>&dagger;</sup>,</span>
+            <span class="author-block" style="margin-right: 5px;">
+              Toby Jack<sup>&dagger;</sup>,</span>
+            <span class="author-block" style="margin-right: 5px;">
+              Max Yang<sup>&dagger;</sup>,</span>
+            <span class="author-block" style="margin-right: 5px;">
+              Haoran Li<sup>&Dagger;</sup>,</span>
             <span class="author-block" style="margin-right: 5px; margin-bottom: 5px;">
-              <a href="https://lepora.com/">Nathan F. Lepora</a>
+              <a href="https://lepora.com/">Nathan F. Lepora</a><sup>&dagger;</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Bristol Robotics Laboratory, University of Bristol</span>
+            <span class="author-block"><sup>&dagger;</sup>Bristol Robotics Laboratory, University of Bristol</span>
+            <span class="author-block"><sup>&Dagger;</sup>Xi'an Jiaotong-Liverpool University</span>
           </div>
 
           <div class="column has-text-centered">
@@ -203,37 +210,31 @@
 
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container task-gallery-container">
     <h2 class="title is-3 has-text-centered">In-Hand Manipulation in TactileLab</h2>
+    <p class="has-text-centered">
+      In-hand manipulation with rich tactile observation, from left to right: contact depth map, pixel-level tactile flow, sparse tactile flow. TactileLab supports multiple tactile hands, such as using Allegro Hand and Leap Hand (frequency 100FPS v.s. 10FPS).
+    </p>
 
-    <div class="columns is-centered is-multiline">
+    <div class="columns is-centered is-multiline simulation-task-gallery">
 
-      <div class="column is-full">
+      <div class="column is-half">
         <div class="content">
-          <h3 class="title is-4">Tactile Allegro Hand</h3>
-          <p>
-            In-hand manipulation with rich tactile observations (from left to right: contact depth map, pixel-level tactile flow, sparse tactile flow) using Allegro Hand with TacTips.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+          <video id="dollyzoom" autoplay controls muted loop playsinline>
             <source src="./static/videos/tactilelab/hand/allegro_hand_tactile_visualization.mp4"
                     type="video/mp4">
           </video>
+          <h3 class="title is-5">Tactile Allegro Hand</h3>
         </div>
       </div>
 
-      <div class="column is-full">
-        <h3 class="title is-4">Tactile Leap Hand</h3>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              TactileLab supports multiple tactile hands, such as Leap Hand (observation frequency 10 FPS).
-            </p>
-            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/tactilelab/hand/leap_rotate_s1_tactile_visual.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
+      <div class="column is-half">
+        <div class="content">
+          <video id="matting-video" autoplay controls muted loop playsinline>
+            <source src="./static/videos/tactilelab/hand/leap_rotate_s1_tactile_visual.mp4"
+                    type="video/mp4">
+          </video>
+          <h3 class="title is-5">Tactile Leap Hand</h3>
         </div>
       </div>
     </div>
@@ -312,54 +313,93 @@
 
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container task-gallery-container sim2real-container">
     <h2 class="title is-3 has-text-centered">TactileLab Sim2Real Deployment</h2>
 
     <h3 class="title is-4">Dual-Arm Object-Tracking Tasks</h3>
-    <div class="columns is-centered is-multiline">
-      <div class="column is-full">
+    <div class="columns is-multiline simulation-task-gallery">
+      <div class="column is-one-third">
         <div class="content">
-          <h4 class="title is-5">Cube Tracking</h4>
-          <p>
-            A policy trained in TactileLab on a rigid cube transfers to the real system for straight-line object following.
-          </p>
-          <video autoplay controls muted loop playsinline height="100%">
+          <video autoplay controls muted loop playsinline>
             <source src="./static/videos/tactilelab/obj_follow/cube_straight.mp4"
                     type="video/mp4">
           </video>
+          <h4 class="title is-5">Cube Tracking</h4>
         </div>
       </div>
 
-      <div class="column is-full">
+      <div class="column is-one-third">
         <div class="content">
-          <h4 class="title is-5">Soft Blue Ball Tracking</h4>
-          <p>
-            The blue ball introduces curved-surface contact with a soft object, testing whether tactile flow observations remain useful beyond the rigid training object.
-          </p>
-          <video autoplay controls muted loop playsinline height="100%">
+          <video autoplay controls muted loop playsinline>
             <source src="./static/videos/tactilelab/obj_follow/blueball_straight.mp4"
                     type="video/mp4">
           </video>
+          <h4 class="title is-5">Soft Blue Ball Tracking</h4>
         </div>
       </div>
 
-      <div class="column is-full">
+      <div class="column is-one-third">
         <div class="content">
-          <h4 class="title is-5">Soft Brain Tracking</h4>
-          <p>
-            The brain object is soft with an irregular contact surface, providing a more challenging sim-to-real deployment case with changing local contact geometry.
-          </p>
-          <video autoplay controls muted loop playsinline height="100%">
+          <video autoplay controls muted loop playsinline>
             <source src="./static/videos/tactilelab/obj_follow/brain_straight.mp4"
                     type="video/mp4">
           </video>
+          <h4 class="title is-5">Soft Brain Tracking</h4>
         </div>
       </div>
     </div>
 
-    <h3 class="title is-4">In-Hand Maniulation</h3>
-    <div class="content">
-      <p>Video Coming Soon</p>
+    <h3 class="title is-4">In-Hand Manipulation</h3>
+    <div class="columns is-multiline simulation-task-gallery rw-hand-gallery">
+      <div class="column is-full">
+        <div class="content">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/tactilelab/rw_hand/combined_potbox.mp4"
+                    type="video/mp4">
+          </video>
+          <h4 class="title is-5">Pot Box Manipulation</h4>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="content">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/tactilelab/rw_hand/combined_apple.mp4"
+                    type="video/mp4">
+          </video>
+          <h4 class="title is-5">Apple Manipulation</h4>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="content">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/tactilelab/rw_hand/combined_brain.mp4"
+                    type="video/mp4">
+          </video>
+          <h4 class="title is-5">Brain Manipulation</h4>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="content">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/tactilelab/rw_hand/combined_container.mp4"
+                    type="video/mp4">
+          </video>
+          <h4 class="title is-5">Container Manipulation</h4>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="content">
+          <video autoplay controls muted loop playsinline>
+            <source src="./static/videos/tactilelab/rw_hand/combined_raspberry.mp4"
+                    type="video/mp4">
+          </video>
+          <h4 class="title is-5">Raspberry Manipulation</h4>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -369,9 +409,9 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{lin2026tactilelab,
-  author    = {Lin,Yijiong and Lepora, Nathan F.},
+  author    = {Lin, Yijiong and He, Wenhao and Jack, Toby and Yang, Max and Li, Haoran and Lepora, Nathan F.},
   title     = {TactileLab: Efficient Multimodal Tactile Simulation for Shear-Sensitive Dexterous Sim2Real Robotic Manipulation},
-  journal   = {arxiv},
+  journal   = {arXiv preprint},
   year      = {2026},
 }</code></pre>
   </div>

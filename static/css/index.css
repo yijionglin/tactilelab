@@ -198,6 +198,11 @@ body {
   max-width: none;
 }
 
+.sim2real-container {
+  width: 200%;
+  max-width: 1000px;
+}
+
 .simulation-task-gallery .column {
   padding: 1rem;
 }
